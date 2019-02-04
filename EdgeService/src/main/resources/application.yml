@@ -1,0 +1,30 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: EdgeService
+
+eureka:  
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/      
+    registerWithEureka: true
+  instance:
+    preferIpAddress: true
+    fetchRegistry: true
+              
+zuul:
+#  ignoredServices: '*'
+  routes:
+    tracking: /tracking/**
+
+ribbon:
+  eureka:
+    enabled: true
+    
+#zuul: 
+#  routes: 
+#    resource: 
+#    path: /tracking/** 
+#    stripPrefix: false 
+        
