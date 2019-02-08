@@ -13,6 +13,13 @@ public class TrackingController {
 	
 		@RequestMapping(method = RequestMethod.GET, value = "/tracking/getTracking")		
 		public String  getTracking (@RequestParam(value="name", defaultValue ="prueba") String name) {			
-			return "Hello this is tracking";			
+			return "Hello this is gettracking";			
 		}
+
+
+		@RequestMapping(method = RequestMethod.GET, value = "/tracking")		
+		public String  getSoloTracking (@RequestParam(value="name", defaultValue ="prueba") String name) {			
+			return "Hello this is SOLO ttracking";			
+		}
+
 }
